@@ -67,7 +67,7 @@ function getCategories(request, response) {
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
   let data = []
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY id ASC')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY products.name')
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
@@ -97,10 +97,8 @@ const getRelatedProductsById = (request, response) => {
     }
   })
 }
-
 const createProduct = (request, response) => {
   const { name, email } = request.body
-
   pool.query('INSERT INTO products (name, email) VALUES ($1, $2)', [name, email], (error, _results) => {
     if (error) {
       console.log(error)
@@ -110,11 +108,9 @@ const createProduct = (request, response) => {
     }
   })
 }
-
 const updateProduct = (request, response) => {
   const id = parseInt(request.params.id)
   const { name, email } = request.body
-
   // Note: query is not correct
   pool.query(
     'UPDATE products SET name = $1, email = $2 WHERE id = $3',
@@ -129,10 +125,8 @@ const updateProduct = (request, response) => {
     }
   )
 }
-
 const deleteProduct = (request, response) => {
   const id = parseInt(request.params.id)
-
   pool.query('DELETE FROM products WHERE id = $1', [id], (error, _results) => {
     if (error) {
       console.log(error)
