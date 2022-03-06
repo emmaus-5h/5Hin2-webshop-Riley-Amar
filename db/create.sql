@@ -9,8 +9,8 @@
   description TEXT,
   price NUMERIC(10, 2),
   state TEXT,
-  maintenance NUMERIC(10, 2)
-  
+  maintenance NUMERIC(10, 2),
+  huren NUMERIC(10, 2)
 );
 
   
@@ -25,12 +25,12 @@
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, state, maintenance ) values ('PacMan', 'Navigate Pac-Man through a maze escaping ghosts and eating Pac-Dots.', '816905633-0', 1650, 'Brand-new', 2); 
-insert into products (name, description, code, price, state, maintenance ) values ('Tetris', 'Differently shaped forms fall down into a 2D container. The forms, which can be moved and rotated, must be sorted in "on-the-fly".', '077030122-3', 2950, 'Second-hand', 3);   
-insert into products (name, description, code, price, state, maintenance ) values ('Space Invaders', 'The object of the game is to shoot the alien invaders and keep them off the ground.', '445924201-X', 2350,'Brand-new', 2);  
-insert into products (name, description, code, price, state, maintenance ) values ('Galaga', 'The sequel to Galaxian (1979), the player controls a spaceship and faces waves of enemy aliens that try to destroy, capture, or collide with the spaceship.', '693155505-7', 2450,'Brand-new',2);  
+insert into products (name, description, code, price, state, maintenance, huren ) values ('PacMan', 'Navigate Pac-Man through a maze escaping ghosts and eating Pac-Dots.', '816905633-0', 1650, 'Brand-new', 2, 3); 
+insert into products (name, description, code, price, state, maintenance ) values ('Tetris', 'Differently shaped forms fall down into a 2D container. The forms, which can be moved and rotated, must be sorted in "on-the-fly".', '077030122-3', 2950, 'Second-hand', 3, 1);   
+insert into products (name, description, code, price, state, maintenance, huren ) values ('Space Invaders', 'The object of the game is to shoot the alien invaders and keep them off the ground.', '445924201-X', 2350,'Brand-new', 2,1 );  
+insert into products (name, description, code, price, state, maintenance, huren ) values ('Galaga', 'The sequel to Galaxian (1979), the player controls a spaceship and faces waves of enemy aliens that try to destroy, capture, or collide with the spaceship.', '693155505-7', 2450,'Brand-new',2, 2);  
 insert into products (name, description, code, price, state, maintenance ) values ('Centipede', 'The player controls a gun that can only move in the bottom fifth of the screen. The object is to shoot a centipede that works its way down to the player area through a field of mushrooms.', '686928463-6', 1990, 'Second-hand',2); 
-insert into products (name, description, code, price, state, maintenance ) values ('Q*bert', 'Q*bert must to make the top of the blocks the color shown and avoid enemies.', '492662523-7', 2700, 'Brand-new', 1);  
+insert into products (name, description, code, price, state, maintenance, huren ) values ('Q*bert', 'Q*bert must to make the top of the blocks the color shown and avoid enemies.', '492662523-7', 2700, 'Brand-new', 1, 3);  
 insert into products (name, description, code, price, state, maintenance ) values ('Donkey Kong', 'Donkey Kong is an arcade game developed by Nintendo, released in 1981. It is an early example of the platform genre, as the gameplay focuses on maneuvering the main character across a series of platforms while dodging obstacles. ' , '492662523-7', 175, 'Brand-new', 1);
 insert into products (name, description, code, price, state, maintenance ) values ('Pinball', 'Pinball is an arcade entertainment machine in which a ball rolls and is propelled inside the machine, hitting various lights, bumpers, ramps, and other targets depending on its design. The games objective is generally to score as many points as possible by hitting these targets and making various shots with flippers before the ball is lost.', '365105475-9', 4000, 'Brand-new', 2);
 insert into products (name, description, code, price, state, maintenance ) values ('Air hockey', 'a game in which players attempt to knock a plastic disc into their opponents goal across a specially designed table that produces a cushion of air to reduce friction.', '419055132-1', 922, 'Second-hand', 4);
