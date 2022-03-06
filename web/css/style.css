@@ -3,6 +3,7 @@
 footer {
   margin: 20px;
   font-size: 12px;
+  background-color: #f7d9ef ;
 } 
 
 .toast {
@@ -24,7 +25,7 @@ footer {
 
 .card {
   width:200px; 
-  height: 800px; 
+  height: 815px; 
   margin-bottom: 20px
 }
 
@@ -75,6 +76,6 @@ footer {
 }
 
 body {
-  background-color: #e9f5f9 ;
+  background-color: #d9eff7 ;
   color: black ;
 }
