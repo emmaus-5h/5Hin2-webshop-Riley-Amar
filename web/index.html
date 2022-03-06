@@ -61,6 +61,7 @@
             <li><span class="propert-name">State:</span><span class="product_state"></span></li>
 						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
+            <li><span class="propert-name">Size:</span><span class="product_size"></span></li>
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
 					<input class="product_id" type="hidden" name="id" data-json="">
@@ -124,6 +125,7 @@
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
               clone.querySelector(".product_state").textContent =`${product.state} `
+              clone.querySelector(".product_size").textContent =`${product.size} `
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = product.code
               clone.querySelector(".product_id").value = product.id
