@@ -10,6 +10,7 @@
   price NUMERIC(10, 2),
   state TEXT,
   maintenance NUMERIC(10, 2)
+  
 );
 
   
@@ -31,7 +32,9 @@ insert into products (name, description, code, price, state, maintenance ) value
 insert into products (name, description, code, price, state, maintenance ) values ('Centipede', 'The player controls a gun that can only move in the bottom fifth of the screen. The object is to shoot a centipede that works its way down to the player area through a field of mushrooms.', '686928463-6', 1990, 'Second-hand',2); 
 insert into products (name, description, code, price, state, maintenance ) values ('Q*bert', 'Q*bert must to make the top of the blocks the color shown and avoid enemies.', '492662523-7', 2700, 'Brand-new', 1);  
 insert into products (name, description, code, price, state, maintenance ) values ('Donkey Kong', 'Donkey Kong is an arcade game developed by Nintendo, released in 1981. It is an early example of the platform genre, as the gameplay focuses on maneuvering the main character across a series of platforms while dodging obstacles. ' , '492662523-7', 175, 'Brand-new', 1);
-insert into products (name, description, code, price, state, maintenance ) values ('Pinball', 'Pinball is an arcade entertainment machine in which a ball rolls and is propelled inside the machine, hitting various lights, bumpers, ramps, and other targets depending on its design. The games objective is generally to score as many points as possible by hitting these targets and making various shots with flippers before the ball is lost.','365105475-9', 4000, 'Brand-new', 2);
+insert into products (name, description, code, price, state, maintenance ) values ('Pinball', 'Pinball is an arcade entertainment machine in which a ball rolls and is propelled inside the machine, hitting various lights, bumpers, ramps, and other targets depending on its design. The games objective is generally to score as many points as possible by hitting these targets and making various shots with flippers before the ball is lost.', '365105475-9', 4000, 'Brand-new', 2);
+insert into products (name, description, code, price, state, maintenance ) values ('Air hockey', 'a game in which players attempt to knock a plastic disc into their opponents goal across a specially designed table that produces a cushion of air to reduce friction.', '419055132-1', 922, 'Second-hand', 4);
+insert into products (name, description, code, price, state, maintenance ) values ('Dance Dance Revolution', 'Dance Dance Revolution is the pioneering series of the rhythm and dance genre in video games. Players stand on a "dance platform" or stage and hit colored arrows laid out in a cross with their feet to musical and visual cues. Players are judged by how well they time their dance to the patterns presented to them and are allowed to choose more music to play to if they receive a passing score.' , '740229985-8', 3399, 'Second-hand', 4);
 
    
 CREATE TABLE maintenance (
@@ -50,7 +53,19 @@ insert into maintenance (design, explanation, temperature, extra_parts, customiz
    
 insert into maintenance (design, explanation, temperature, extra_parts, customization ) values ('Bar-top', 'The bartop design is as the name suggests on bar-tops, with its smaller design it is built to be a lot more durable. It is advised to make sure you avoid taking the bar-top to extreme temperatures', 0-30, 2, 1);
 
-  
+insert into maintenance (design, explanation, temperature, extra_parts, customization ) values ('Special', 'Special machines are machines normally found in an arcade but do not fit in with all the others. The special machines require special care that is all quite similar. All specials have to be cleaned regularly to make sure it does not break cause these machines require force to play. Fur utmost longevity, keep the temperature low so that the specials do not overheat', 15-23, 3&4, 1);
+
+CREATE TABLE huren (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ Tijd VARCHAR(15),
+ Afstand VARCHAR(15),
+ Kosten_aanpassing VARCHAR(255)
+);
+
+insert into huren (Tijd, Afstand, Kosten_aanpassing) values ('12 uur', '30 km', '-500');
+insert into huren (Tijd, Afstand, Kosten_aanpassing) values ('6 uur', '60 km', '-300');   
+insert into huren (Tijd, Afstand, Kosten_aanpassing) values ('24 uur', '40 km', '-200' );
+   
 CREATE TABLE extra_parts (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  buttons TEXT,
@@ -59,7 +74,10 @@ CREATE TABLE extra_parts (
  
 insert into extra_parts (buttons, joysticks) values ('2 buttons', '1 joysticks');
 insert into extra_parts (buttons, joysticks) values ('4 buttons', '2 joysticks');
-
+insert into extra_parts (buttons, joysticks) values ('1 Dancemat', '0 joysticks');
+insert into extra_parts (buttons, joysticks) values ('1 airhockeypuck', '2 strikers');
+   
+   
 CREATE TABLE customization (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  parts TEXT,
